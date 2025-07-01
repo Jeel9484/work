@@ -46,8 +46,8 @@ const ReferralTrackingCard = () => {
         </button>
       </div>
       <div className="flex flex-col md:flex-row gap-6 mt-4">
-        <div className="flex flex-col gap-4 w-full md:w-1/2">
-          <div className="bg-gradient-to-r from-[#1A1F37] to-[#0B1437] rounded-lg p-4 flex items-center gap-3 border border-white/5">
+        <div className="flex flex-col gap-3 w-full md:w-1/2 ">
+          <div className="bg-gradient-to-r from-[#1A1F37] to-[#0B1437] rounded-lg p-4 flex items-center gap-3 mt-3 border border-white/5">
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-lg">
               <FaUserFriends className="text-white text-lg" />
             </div>

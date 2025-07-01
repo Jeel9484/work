@@ -89,7 +89,7 @@ const projects = [
 
 const ProjectCard = () => {
 	return (
-		<div className="bg-gradient-to-br from-[#0B1437] to-[#1A1F37] rounded-2xl p-4 sm:p-6 shadow-lg w-full max-w-4xl text-white overflow-x-auto border border-white/5">
+		<div className="bg-gradient-to-br from-[#0B1437] to-[#1A1F37] rounded-2xl p-4 sm:p-6 shadow-lg w-full max-w-9xl text-white overflow-x-auto border border-white/5">
 
 			<div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-2">
 				<div>

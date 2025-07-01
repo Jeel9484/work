@@ -6,6 +6,7 @@ import { AiOutlineTool } from "react-icons/ai";
 import { IoMdPerson } from "react-icons/io";
 import { IoIosRocket } from "react-icons/io";
 import jellyfishBg from "../assets/jellyfishBg.jpg";
+import { Link } from "react-router-dom";
 
 const SidebarCard = ({ open, setOpen }) => {
   const handleNavClick = () => {
@@ -72,7 +73,7 @@ const SidebarCard = ({ open, setOpen }) => {
                 onClick={handleNavClick}
               >
                 <IoStatsChartSharp className="bg-[#1A1F37] p-3 rounded-lg text-blue-500" size={40} />
-                <span className="mt-2.5 text-white">Tables</span>
+                <Link to="/tables" className="mt-2.5 text-white w-full block">Tables</Link>
               </li>
               
               <li 
@@ -80,7 +81,7 @@ const SidebarCard = ({ open, setOpen }) => {
                 onClick={handleNavClick}
               >
                 <FaRegCreditCard className="bg-[#1A1F37] p-3 rounded-lg text-blue-500" size={40} />
-                <span className="mt-2.5 text-white">Billing</span>
+                <Link to="/billing" className="mt-2.5 text-white w-full block">Billing</Link>
               </li>
               
               <li 
@@ -88,7 +89,7 @@ const SidebarCard = ({ open, setOpen }) => {
                 onClick={handleNavClick}
               >
                 <AiOutlineTool className="bg-[#1A1F37] p-3 rounded-lg text-blue-500" size={40} />
-                <span className="mt-2.5 text-white">RTL</span>
+                <Link to="/Rtl" className="mt-2.5 text-white w-full block">RTL</Link>
               </li>
 
               <li className="mt-8 text-xs text-blue-200 uppercase tracking-wider font-semibold">
@@ -100,7 +101,7 @@ const SidebarCard = ({ open, setOpen }) => {
                 onClick={handleNavClick}
               >
                 <IoMdPerson className="bg-[#1A1F37] p-3 rounded-lg text-blue-500" size={40} />
-                <span className="mt-2.5 text-white">Profile</span>
+                <Link to="/Profile" className="mt-2.5 text-white w-full block">Profile</Link>
               </li>
               
               <li 
@@ -108,7 +109,7 @@ const SidebarCard = ({ open, setOpen }) => {
                 onClick={handleNavClick}
               >
                 <IoDocument className="bg-[#1A1F37] p-3 rounded-lg text-blue-500" size={40} />
-                <span className="mt-2.5 text-white">Sign In</span>
+                <Link to="/sign-in" className="mt-2.5 text-white w-full block">Sign In</Link>
               </li>
               
               <li 
@@ -116,7 +117,7 @@ const SidebarCard = ({ open, setOpen }) => {
                 onClick={handleNavClick}
               >
                 <IoIosRocket className="bg-[#1A1F37] p-3 rounded-lg text-blue-500" size={40} />
-                <span className="mt-2.5 text-white">Sign Up</span>
+                <Link to="/sign-up" className="mt-2.5 text-white w-full block">Sign Up </Link>
               </li>
             </ul>
           </nav>

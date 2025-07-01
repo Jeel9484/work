@@ -52,7 +52,7 @@ const orders = [
 const OrderOverView = () => {
 	return (
 		<div
-			className="rounded-2xl bg-gradient-to-br from-[#0B1437] to-[#1A1F37] shadow-lg text-white w-full max-w-md min-h-[220px] p-4 sm:p-6 border border-white/5"
+			className="rounded-2xl bg-gradient-to-br from-[#0B1437] to-[#1A1F37] shadow-lg text-white w-full max-w-6xl min-h-[220px] p-4 sm:p-6 border border-white/5"
 		>
 			<div className="mb-4 sm:mb-6">
 				<h2 className="text-lg sm:text-xl font-bold mb-1">Orders overview</h2>

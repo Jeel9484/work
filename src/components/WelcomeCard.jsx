@@ -7,7 +7,7 @@ import { FaMicrophone } from "react-icons/fa";
 const WelcomeCard = () => {
   return (
     <motion.div
-      className="relative rounded-xl p-6 shadow-md w-full col-span-3 flex flex-col md:flex-row items-start justify-start gap-4 overflow-hidden min-h-[230px]"
+      className="relative rounded-xl p-6 shadow-md w-full col-span-3 flex flex-col md:flex-row items-start justify-start gap-4 overflow-hidden"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -27,7 +27,7 @@ const WelcomeCard = () => {
         <p className="text-sm text-gray-400 mt-2">
           Glad to see you again! Ask me anything.
         </p>
-        <button className="mt-24 inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white">
+        <button className="mt-40 inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white">
            Tap to record <GoArrowRight className="text-white" />
         </button>
       </div>

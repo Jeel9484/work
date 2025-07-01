@@ -28,7 +28,7 @@ const Dashboard = () => {
 
   return (
     <div
-      className="flex min-h-screen relative"
+      className="flex min-h-screen relative bg-[#01245A]/90"
       style={{
         backgroundImage: `url(${jellyfishBg})`,
         backgroundSize: "cover",
@@ -37,56 +37,63 @@ const Dashboard = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Semi-transparent overlay to improve content readability */}
-      <div className="absolute inset-0 bg-[#0B1437]/80 z-0"></div>
 
-      {/* Overlay for mobile sidebar */}
-      {sidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-40 z-30 lg:hidden"
-          style={{ left: "16rem" }} // 16rem = 256px = w-64
-          onClick={() => setSidebarOpen(false)}
-        />
-      )}
-
-      {/* Sidebar - always above overlay */}
-      <div className="fixed top-0 left-0 h-full w-64 z-50 overflow-y-auto">
+      {/* Sidebar for desktop */}
+      <div className="hidden lg:block fixed top-0 left-0 h-full w-64 z-50 overflow-y-auto">
         <SidebarCard open={sidebarOpen} setOpen={setSidebarOpen} />
       </div>
 
+      {/* Sidebar for mobile */}
+      {sidebarOpen && (
+        <div className="fixed inset-0 z-50 flex lg:hidden">
+          <div className="w-64 h-full bg-white shadow-lg">
+            <SidebarCard open={sidebarOpen} setOpen={setSidebarOpen} />
+          </div>
+          <div
+            className="flex-1 bg-black bg-opacity-40"
+            onClick={() => setSidebarOpen(false)}
+          />
+        </div>
+      )}
+
       {/* Main content area */}
-      <div className="flex-1 flex flex-col min-h-screen overflow-hidden relative z-10">
-        <Header setSidebarOpen={setSidebarOpen} />
+      <div className="flex-1 flex flex-col min-h-screen overflow-hidden relative z-10 lg:ml-64">
+        {/* Sticky Header */}
+        <div className="sticky top-0 z-20 bg-transparent">
+          <Header setSidebarOpen={setSidebarOpen} />
+        </div>
 
         {/* Main content */}
-        <main className="flex-1 p-4 md:p-6 lg:p-8">
-          <div className="max-w-7xl mx-auto">
+        <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
+          <div className= " w-full space-y-6">
             {/* Stats Cards */}
             <StatsCard />
 
             {/* First Row */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
-              <div className="lg:row-span-2 lg:min-h-[280px]">
-                <WelcomeCard />
-              </div>
-              <div className="lg:min-h-[280px] lg:min-w-[344px]">
-                <SatisfactionCard />
-              </div>
-              <div className="lg:min-h-[280px] lg:min-w-[344px]">
-                <ReferralTrackingCard />
-              </div>
+            <div className="grid grid-cols-1 lg:grid-cols-8 gap-4 mt-6">
+              <WelcomeCard />
+              <SatisfactionCard />
+              <ReferralTrackingCard />
             </div>
 
             {/* Second Row */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 mt-6">
+              <div className="lg:col-span-3">
               <SalesOverviewCard />
+              </div>
+              <div className="lg:col-span-2">
               <ActiveUsersCard />
+              </div>
             </div>
 
             {/* Third Row */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-6">
+              <div className="lg:col-span-2">
               <ProjectCard />
-              <OrderOverView />
+              </div>
+              <div className="lg:col-span-1">
+                <OrderOverView />
+                </div>
             </div>
           </div>
 

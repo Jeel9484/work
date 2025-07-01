@@ -39,7 +39,7 @@ const stats = [
 
 const ActiveUsersCard = () => (
   <div
-    className="rounded-2xl bg-gradient-to-br from-[#0B1437] to-[#1A1F37] shadow-xl shadow-blue-900/20 overflow-hidden w-full max-w-xl min-h-[220px] p-4 sm:p-6 border border-white/5"
+    className="rounded-2xl bg-gradient-to-br from-[#0B1437] to-[#1A1F37] shadow-xl shadow-blue-900/20 overflow-hidden w-full max-w-8xl min-h-[220px] p-4 sm:p-6 border border-white/5"
   >
     {/* Title and change indicator */}
     <div className="mb-2 sm:mb-4">
